@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/aduncan88/data-sync.png)](http://travis-ci.org/aduncan88/data-sync)
 # data-sync.js
 A simple JavaScript synchronisation module for Node.JS. Used to keep two sets of data which have a unique key in sync whilst keeping data writes to a minimum.
 
