@@ -11,20 +11,20 @@ A simple JavaScript synchronisation module for Node.JS. Used to keep two sets of
 
 ### Example
 
-    var dataSync = require(data-sync).create();
+    var dataSync = require('data-sync')()
 
     dataSync.sync(
-      dataSync.formatArray('id', originalData) 
+      dataSync.formatArray('id', originalData)
       dataSync.formatArray('id', newData),
       'id',
       isDifferent,
       create,
       update,
       del,
-      function() {
-        console.log('Data Sync Complete');
+      function(error) {
+        console.log('Data Sync Complete')
       }
-    );
+    )
 
 For a complete example please refer to the included unit test.
 
@@ -40,11 +40,11 @@ The data-sync module contains two functions. These are:
 formatArray is used to convert an array of data into the correct format required to perform the data sync.
 It takes two parameters. These are as follows:
 
-1. **unqiueId**: The name of the key which is to be used as a unique ID for each object. 
+1. **unqiueId**: The name of the key which is to be used as a unique ID for each object.
 2. **dataArray**: The array of data.
 
 e.g input
-    
+
     formatArray(
       'id',
       [
@@ -71,7 +71,7 @@ sync is used to perform the actual data syncronisation. It takes 8 parameters. T
 3. **uniqueId**: Name of the key which is to be used as a unique ID for each object.
 4. **comparatorFunction**: Used to determine if two objects should be considered different and therefore call update(). Should return true if there is a difference. Parameters are: oldObject, newObject.
 5. **createFunction** Function called when an object is present within the new data which is not in the original. Parameters are newObject, callback.
-6. **updateFunction** Function called when an object has changed within the new data. Parameters are uniqueIdValue, newObject, callback.
+6. **updateFunction** Function called when an object has changed within the new data. Parameters are uniqueIdValue, oldObject, newObject, callback.
 7. **deleteFunction** Function called when an object is present within the original data, but not the new data. Parameters are uniqueIdValue, callback.
 8. **finalCallback** Function called when data syncronisation is complete.
 
