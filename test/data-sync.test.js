@@ -1,4 +1,4 @@
-var dataSync = require('../lib/data-sync').create()
+var dataSync = require('../lib/data-sync')()
   , originalData = [
       {id: 1, name: 'Fred'},
       {id: 2, name: 'Jim'},
@@ -21,12 +21,12 @@ function create(item, callback) {
   callback();
 }
 
-function update(uniqueId, newItem, callback) {
+function update(uniqueId, oldItem, newItem, callback) {
   originalData.some(function(item, index) {
     if (originalData[index].id === uniqueId) {
       originalData[index] = newItem;
       return true;
-    }  
+    }
   });
   callback();
 }
