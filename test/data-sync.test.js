@@ -31,7 +31,7 @@ function update(uniqueId, oldItem, newItem, callback) {
   callback();
 }
 
-function del(uniqueId, callback) {
+function del(uniqueId, oldItem, callback) {
   originalData.some(function(item, index) {
     if (originalData[index].id === uniqueId) {
       originalData.splice(index, 1);

@@ -72,7 +72,7 @@ sync is used to perform the actual data syncronisation. It takes 8 parameters. T
 4. **comparatorFunction**: Used to determine if two objects should be considered different and therefore call update(). Should return true if there is a difference. Parameters are: oldObject, newObject.
 5. **createFunction** Function called when an object is present within the new data which is not in the original. Parameters are newObject, callback.
 6. **updateFunction** Function called when an object has changed within the new data. Parameters are uniqueIdValue, oldObject, newObject, callback.
-7. **deleteFunction** Function called when an object is present within the original data, but not the new data. Parameters are uniqueIdValue, callback.
+7. **deleteFunction** Function called when an object is present within the original data, but not the new data. Parameters are uniqueIdValue, oldObject, callback.
 8. **finalCallback** Function called when data syncronisation is complete.
 
 e.g
