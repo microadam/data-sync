@@ -5,7 +5,7 @@
   },
   "name": "data-sync",
   "description": "A JavaScript data synchronisation module for Node.JS",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/aduncan88/data-sync.git"
