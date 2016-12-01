@@ -22,7 +22,6 @@
   },
   "dependencies": {
     "async": "^2.1.4",
-    "lodash": "^4.17.2",
     "lodash.difference": "^4.5.0",
     "lodash.intersection": "^4.4.0",
     "lodash.pluck": "^3.1.2"
