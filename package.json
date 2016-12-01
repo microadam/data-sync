@@ -5,7 +5,7 @@
   },
   "name": "data-sync",
   "description": "A JavaScript data synchronisation module for Node.JS",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "repository": {
     "type": "git",
     "url": "git://github.com/microadam/data-sync.git"
